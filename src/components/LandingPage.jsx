@@ -1,6 +1,5 @@
 import "./LandingPage.css";
-
-import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Button, Navbar, Nav, Card } from "react-bootstrap";
 import "./LandingPage.css";
 
@@ -21,8 +20,8 @@ export default function LandingPage() {
           <Navbar.Collapse id="ecotrack-navbar">
             <Nav className="ms-auto eco-nav-links">
               <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#how-it-works">How it Works</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link as={Link} to="/how-it-works">How it Works</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -48,9 +47,11 @@ export default function LandingPage() {
                 environmental indicators through clear, data-driven visuals.
               </p>
               <div className="hero-buttons mb-3">
-                <Button variant="success" size="lg">
-                  Enter Dashboard
-                </Button>
+                      <Link to="/weather" style={{ textDecoration: "none" }}>
+                        <Button variant="success" size="lg">
+                          Enter Dashboard
+                        </Button>
+                      </Link>
                 <Button variant="outline-success" size="lg">
                   Learn More
                 </Button>
