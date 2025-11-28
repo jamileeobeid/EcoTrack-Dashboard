@@ -1,0 +1,263 @@
+/* Wrapper for the whole page */
+.landing-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fb;
+  color: #0f172a;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Navbar tweaks */
+.eco-navbar {
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.eco-nav-links .nav-link {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+/* Hero section */
+.hero-section {
+  padding: 4.5rem 0 4rem;
+}
+
+.hero-badge {
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 3vw + 1rem, 3.4rem);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  max-width: 540px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Overview card on the right */
+.overview-card {
+  border-radius: 1rem;
+}
+
+/* Fake chart styles */
+.fake-chart-wrapper {
+  background-color: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+}
+
+.fake-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  height: 90px;
+}
+
+.chart-bar {
+  flex: 1;
+  border-radius: 999px 999px 0 0;
+  background-color: #16a34a;
+}
+
+/* Different heights for variation */
+.bar-1 {
+  height: 30%;
+}
+.bar-2 {
+  height: 55%;
+}
+.bar-3 {
+  height: 45%;
+}
+.bar-4 {
+  height: 70%;
+}
+.bar-5 {
+  height: 40%;
+}
+.bar-6 {
+  height: 65%;
+}
+.bar-7 {
+  height: 35%;
+}
+
+/* Tiles under the chart */
+.info-tile {
+  background-color: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 0.9rem;
+  height: 100%;
+}
+
+/* Features section */
+.features-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.section-heading {
+  font-size: 1.9rem;
+}
+
+.feature-card {
+  border-radius: 1rem;
+}
+
+.alternate-card {
+  min-height: 380px; /* matches the height of your full card */
+  background-color: #f8fafc; /* optional: same neutral background */
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 1rem 0;
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* =======================
+   Dark mode – refined colors
+   ======================= */
+
+.landing-root--dark {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+/* Headings */
+.landing-root--dark h1,
+.landing-root--dark h2,
+.landing-root--dark h3 {
+  color: #f9fafb;
+}
+
+/* Subtitles & paragraphs */
+.landing-root--dark p,
+.landing-root--dark .lead {
+  color: #9ca3af;
+}
+
+/* Small labels / captions */
+.landing-root--dark small,
+.landing-root--dark .text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Hero section tweak */
+.landing-root--dark .hero-subtitle {
+  color: #a1a1aa;
+}
+
+/* Overview + cards */
+.landing-root--dark .overview-card,
+.landing-root--dark .feature-card,
+.landing-root--dark .fake-chart-wrapper,
+.landing-root--dark .info-tile {
+  background-color: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1f2937;
+}
+
+/* Feature descriptions */
+.landing-root--dark .feature-card p {
+  color: #9ca3af;
+}
+
+/* Section backgrounds */
+.landing-root--dark .features-section {
+  background-color: #020617;
+  border-top: 1px solid #1f2937;
+}
+
+/* Footer */
+.landing-root--dark .footer {
+  background-color: #020617;
+  color: #94a3b8;
+  border-top: 1px solid #1f2937;
+}
+
+/* Navbar links */
+.landing-root--dark .navbar,
+.landing-root--dark .navbar-nav .nav-link {
+  color: #e5e7eb;
+}
+
+.landing-root--dark .navbar-nav .nav-link:hover {
+  color: #22c55e;
+}
+
+/* Green accents stay strong */
+.landing-root--dark .text-success {
+  color: #22c55e !important;
+}
+
+/* Slight lift for fake chart in dark mode */
+.landing-root--dark .fake-chart-wrapper {
+  background-color: #0b1220; /* slightly lighter than page */
+}
+
+/* Slight lift for info tiles in dark mode */
+.landing-root--dark .info-tile {
+  background-color: #0b1220;
+}
+
+/* =======================
+   Card color refinement
+   ======================= */
+
+/* LIGHT MODE */
+.overview-card,
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+/* DARK MODE */
+.landing-root--dark .overview-card,
+.landing-root--dark .feature-card {
+  background-color: #0b1220;   /* slightly lifted from page bg */
+  border: 1px solid #1f2937;
+}
+
+/* Optional: text inside cards in dark mode */
+.landing-root--dark .overview-card,
+.landing-root--dark .feature-card {
+  color: #e5e7eb;
+}
+
+.landing-root--dark .overview-card .text-muted,
+.landing-root--dark .feature-card .text-muted {
+  color: #9ca3af !important;
+}
